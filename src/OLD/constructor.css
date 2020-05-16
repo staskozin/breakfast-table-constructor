@@ -1,0 +1,276 @@
+.spc-popup {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  z-index: 3001;
+  overflow: hidden;
+}
+
+.spc-popup__window {
+  background-color: #fff;
+  margin-top: 1vh;
+  height: 98vh;
+  overflow-y: scroll;
+  padding-right: 17px;
+}
+.spc-popup__window::-webkit-scrollbar {
+  display: none;
+}
+
+.spc-popup__heading {
+  margin-top: 11px;
+  margin-bottom: 15px;
+}
+
+.spc-image-wrap {
+  position: relative;
+  width: 550px;
+  height: 465px;
+  margin-top: 20px;
+}
+.spc-image-wrap__back,
+.spc-image-wrap__border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+.spc-image-wrap__pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 424px;
+  transform-origin: 0px 0px 0px;
+  transform: matrix3d(0.545656, -0.152841, 0, 0.000259565, 0.295215, 0.189144, 0, -0.000317071, 0, 0, 1, 0, 54, 131, 0, 1);
+}
+@media screen and (max-width: 424px) {
+  .spc-image-wrap {
+      width: 290px;
+      height: 245px;
+      margin: 0 auto;
+  }
+  .spc-image-wrap__pic {
+      transform: matrix3d(0.288781, -0.0802985, 0, 0.000261192, 0.156104, 0.100166, 0, -0.000320492, 0, 0, 1, 0, 28, 69, 0, 1);
+  }
+}
+
+/* ====== */
+.spc-image-picker__wrap {
+  
+}
+.spc-image-picker__select {
+  display: none;
+}
+.spc-image-picker__heading {
+  margin-top: 15px;
+}
+.spc-image-picker__category {
+  padding-left: 0;
+}
+.spc-image-picker__category:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.selectable-image {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.selectable-image__wrap {
+  
+}
+.selectable-image:last-child .selectable-image__wrap {
+  margin-right: 0;
+}
+.selectable-image__wrap_selected {
+  
+}
+.selectable-image__image {
+  border: 1px solid rgba(0, 0, 0, .4);
+  border-radius: 3px;
+  transition: .3s;
+}
+.selectable-image__image:hover {
+  opacity: .87;
+}
+.selectable-image__caption {
+  margin-bottom: 3px;
+  line-height: 1.35em !important;
+  margin-top: 2px;
+}
+/* ====== */
+
+.c-wrap__main-heading {
+  display: inline-block !important;
+  font-size: 33px;
+}
+.c-wrap__body {
+  
+}
+
+.horizontal-list {
+  list-style-type: none;
+  padding: 0;
+}
+.horizontal-list_color .horizontal-list__item {
+  margin-right: 0;
+}
+.horizontal-list__item {
+  display: inline-block;
+  margin-right: 15px;
+}
+.horizontal-list__item:last-child {
+  margin-right: 0;
+}
+.horizontal-list__item_price {
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+#c-price {
+  font-size: 18px;
+}
+.horizontal-list__item_quantity {
+  font-size: 28px;
+}
+
+#c-quantity {
+  width: 83px;
+  text-align: center;
+}
+#c-submit {
+  position: relative;
+  top: -5px;
+  width: 133px;
+  font-size: 21px;
+  padding-top: 6px;
+  padding-bottom: 7px;
+}
+#c-submit:hover,
+#c-submit:focus,
+#c-image-picker-button:hover,
+#c-image-picker-button:focus{
+  color: #fff;
+  outline: none;
+}
+
+.c-input_border {
+  margin-bottom: 45px;
+}
+.c-input__heading {
+  font-size: 22px;
+  font-weight: bold;
+}
+.c-input__label {
+  font-size: 16px;
+  margin-bottom: 15px;
+  display: block;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.c-input__label_radio {
+  padding-left: 60px;
+  padding-top: 15px;
+}
+.c-input__item_radio {
+  position: absolute;
+  opacity: 0;
+}
+
+.c-input__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  background-size: cover;
+  border: 1px solid #999;
+  border-radius: 100%;
+}
+/* Без лака */
+.c-input__checkmark_13 { background-image: url(/image/catalog/constructor/color-preview/13.jpg); }
+.c-input__checkmark_13-1 { background-image: url(/image/catalog/constructor/border-preview/13-1.jpg); }
+.c-input__checkmark_13-2 { background-image: url(/image/catalog/constructor/border-preview/13-2.jpg); }
+.c-input__checkmark_13-3 { background-image: url(/image/catalog/constructor/border-preview/13-3.jpg); }
+.c-input__checkmark_13-4 { background-image: url(/image/catalog/constructor/border-preview/13-4.jpg); }
+.c-input__checkmark_13-11 { background-image: url(/image/catalog/constructor/border-preview/13-11.jpg); }
+.c-input__checkmark_13-12 { background-image: url(/image/catalog/constructor/border-preview/13-12.jpg); }
+
+/* Натуральный */
+.c-input__checkmark_5 { background-image: url(/image/catalog/constructor/color-preview/5.jpg); }
+.c-input__checkmark_5-1 { background-image: url(/image/catalog/constructor/border-preview/5-1.jpg); }
+.c-input__checkmark_5-2 { background-image: url(/image/catalog/constructor/border-preview/5-2.jpg); }
+.c-input__checkmark_5-3 { background-image: url(/image/catalog/constructor/border-preview/5-3.jpg); }
+.c-input__checkmark_5-4 { background-image: url(/image/catalog/constructor/border-preview/5-4.jpg); }
+.c-input__checkmark_5-11 { background-image: url(/image/catalog/constructor/border-preview/5-11.jpg); }
+.c-input__checkmark_5-12 { background-image: url(/image/catalog/constructor/border-preview/5-12.jpg); }
+
+/* Орех */
+.c-input__checkmark_6 { background-image: url(/image/catalog/constructor/color-preview/6.jpg); }
+.c-input__checkmark_6-1 { background-image: url(/image/catalog/constructor/border-preview/6-1.jpg); }
+.c-input__checkmark_6-2 { background-image: url(/image/catalog/constructor/border-preview/6-2.jpg); }
+.c-input__checkmark_6-3 { background-image: url(/image/catalog/constructor/border-preview/6-3.jpg); }
+.c-input__checkmark_6-4 { background-image: url(/image/catalog/constructor/border-preview/6-4.jpg); }
+.c-input__checkmark_6-11 { background-image: url(/image/catalog/constructor/border-preview/6-11.jpg); }
+.c-input__checkmark_6-12 { background-image: url(/image/catalog/constructor/border-preview/6-12.jpg); }
+
+/* Вишня */
+.c-input__checkmark_7 { background-image: url(/image/catalog/constructor/color-preview/7.jpg); }
+.c-input__checkmark_7-1 { background-image: url(/image/catalog/constructor/border-preview/7-1.jpg); }
+.c-input__checkmark_7-2 { background-image: url(/image/catalog/constructor/border-preview/7-2.jpg); }
+.c-input__checkmark_7-3 { background-image: url(/image/catalog/constructor/border-preview/7-3.jpg); }
+.c-input__checkmark_7-4 { background-image: url(/image/catalog/constructor/border-preview/7-4.jpg); }
+.c-input__checkmark_7-11 { background-image: url(/image/catalog/constructor/border-preview/7-11.jpg); }
+.c-input__checkmark_7-12 { background-image: url(/image/catalog/constructor/border-preview/7-12.jpg); }
+
+/* Венге */
+.c-input__checkmark_8 { background-image: url(/image/catalog/constructor/color-preview/8.jpg); }
+.c-input__checkmark_8-1 { background-image: url(/image/catalog/constructor/border-preview/8-1.jpg); }
+.c-input__checkmark_8-2 { background-image: url(/image/catalog/constructor/border-preview/8-2.jpg); }
+.c-input__checkmark_8-3 { background-image: url(/image/catalog/constructor/border-preview/8-3.jpg); }
+.c-input__checkmark_8-4 { background-image: url(/image/catalog/constructor/border-preview/8-4.jpg); }
+.c-input__checkmark_8-11 { background-image: url(/image/catalog/constructor/border-preview/8-11.jpg); }
+.c-input__checkmark_8-12 { background-image: url(/image/catalog/constructor/border-preview/8-12.jpg); }
+
+/* Белый */
+.c-input__checkmark_15 { background-image: url(/image/catalog/constructor/color-preview/15.jpg); }
+.c-input__checkmark_15-1 { background-image: url(/image/catalog/constructor/border-preview/15-1.jpg); }
+.c-input__checkmark_15-2 { background-image: url(/image/catalog/constructor/border-preview/15-2.jpg); }
+.c-input__checkmark_15-3 { background-image: url(/image/catalog/constructor/border-preview/15-3.jpg); }
+.c-input__checkmark_15-4 { background-image: url(/image/catalog/constructor/border-preview/15-4.jpg); }
+.c-input__checkmark_15-11 { background-image: url(/image/catalog/constructor/border-preview/15-11.jpg); }
+.c-input__checkmark_15-12 { background-image: url(/image/catalog/constructor/border-preview/15-12.jpg); }
+
+.c-input__checkmark:after {
+  position: absolute;
+  display: none;
+}
+.c-input__item_radio:checked ~ .c-input__checkmark:after {
+  display: block;
+}
+.c-input__item_radio:checked ~ .c-input__text {
+  /* font-weight: bold; */
+}
+
+.c-input__checkmark:after {
+  content: "\f00c";
+  font-family: FontAwesome;
+  font-size: 50px;
+  color: #036600;
+  top: 12px;
+  left: 4px;
+}
+
+.horizontal-list_constructor-head {
+  margin-top: 20px;
+  text-align: right;
+}
