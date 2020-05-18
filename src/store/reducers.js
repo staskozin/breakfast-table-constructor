@@ -1,6 +1,8 @@
 import {
   CHANGE_QUANTITY,
-  BLUR_QUANTITY
+  BLUR_QUANTITY,
+  CHANGE_BORDER,
+  CHANGE_COLOR
 } from './actions';
 
 import initialState from './initialState';
@@ -29,6 +31,18 @@ export default (state = initialState, action) => {
         quantity: quantity,
         total: state.price * quantity
       };
+    }
+    case CHANGE_BORDER: {
+      return {
+        ...state,
+        border: action.payload
+      }
+    }
+    case CHANGE_COLOR: {
+      return {
+        ...state,
+        color: action.payload
+      }
     }
     default:
       return state;

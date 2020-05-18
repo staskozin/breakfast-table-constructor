@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import rootReducer from './store/reducers';
 
 import Info from './component/Info/Info';
+import Form from './component/Form/Form';
 
 import { loadState, saveState } from './store/localStorage';
 
@@ -24,6 +25,12 @@ ReactDOM.render(
         <div className="col-sm-12 col-md-6 col-lg-7">
           <Info />
         </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-6">
+          <p>Изображение столика</p>
+        </div>
+        <Form />
       </div>
     </div>
   </Provider>,
