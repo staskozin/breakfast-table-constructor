@@ -17,7 +17,7 @@ function Form(props) {
         <PicturePicker />
       </div>
       <div className="col-sm-2">
-        <BorderPicker selected={props.border} change={props.changeBorder} />
+        <BorderPicker selected={props.border} change={props.changeBorder} color={props.color} />
       </div>
       <div className="col-sm-2">
         <ColorPicker selected={props.color} change={props.changeColor} />
