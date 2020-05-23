@@ -7,6 +7,7 @@ import rootReducer from './store/reducers';
 
 import Info from './component/Info/Info';
 import Form from './component/Form/Form';
+import View from './component/View/View';
 
 import { loadState, saveState } from './store/localStorage';
 
@@ -28,7 +29,7 @@ ReactDOM.render(
       </div>
       <div className="row">
         <div className="col-sm-6">
-          <p>Изображение столика</p>
+          <View />
         </div>
         <Form />
       </div>

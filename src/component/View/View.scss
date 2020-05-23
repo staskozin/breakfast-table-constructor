@@ -1,0 +1,71 @@
+.wrap {
+  position: relative;
+  width: 550px;
+  height: 465px;
+  margin-top: 20px;
+}
+
+.table,
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 424px;
+  transform-origin: 0px 0px 0px;
+  transform: matrix3d(
+    0.545656,
+    -0.152841,
+    0,
+    0.000259565,
+    0.295215,
+    0.189144,
+    0,
+    -0.000317071,
+    0,
+    0,
+    1,
+    0,
+    54,
+    131,
+    0,
+    1
+  );
+}
+
+@media screen and (max-width: 424px) {
+  .wrap {
+    width: 290px;
+    height: 245px;
+    margin: 0 auto;
+  }
+
+  .picture {
+    transform: matrix3d(
+      0.288781,
+      -0.0802985,
+      0,
+      0.000261192,
+      0.156104,
+      0.100166,
+      0,
+      -0.000320492,
+      0,
+      0,
+      1,
+      0,
+      28,
+      69,
+      0,
+      1
+    );
+  }
+}
