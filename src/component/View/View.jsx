@@ -8,7 +8,11 @@ function View(props) {
   return (
     <div className={style.wrap} >
       <img className={style.table} src={`/img/tables/${props.color}-${props.border}.jpg`} alt="" />
-      <img className={style.picture} src="/img/picture.png" alt="" />
+      <img
+        className={style.picture}
+        src={!props.noPicture.checked ? props.picture : null}
+        alt=""
+      />
       <img className={style.border} src={`/img/borders/${border}.png`} alt="" />
     </div>
   )
@@ -17,7 +21,9 @@ function View(props) {
 const putStateToProps = (state) => {
   return {
     border: state.border,
-    color: state.color
+    color: state.color,
+    picture: state.picture,
+    noPicture: state.noPicture
   }
 };
 

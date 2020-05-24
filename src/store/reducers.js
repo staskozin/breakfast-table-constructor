@@ -2,7 +2,9 @@ import {
   CHANGE_QUANTITY,
   BLUR_QUANTITY,
   CHANGE_BORDER,
-  CHANGE_COLOR
+  CHANGE_COLOR,
+  CHANGE_PICTURE,
+  CHANGE_NO_PICTURE
 } from './actions';
 
 import initialState from './initialState';
@@ -57,6 +59,21 @@ export default (state = initialState, action) => {
         color: action.payload,
         price: price,
         total: price * state.quantity
+      }
+    }
+    case CHANGE_PICTURE: {
+      return {
+        ...state,
+        picture: action.payload
+      }
+    }
+    case CHANGE_NO_PICTURE: {
+      return {
+        ...state,
+        noPicture: {
+          checked: action.payload === undefined ? !state.noPicture.checked : action.payload,
+          disabled: false
+        }
       }
     }
     default:

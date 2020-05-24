@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 
 import {
   changeBorder,
-  changeColor
+  changeColor,
+  changePicture,
+  changeNoPicture
 } from '../../store/actions';
 
 import BorderPicker from './BorderPicker/BorderPicker';
@@ -14,7 +16,12 @@ function Form(props) {
   return (
     <>
       <div className="col-sm-2">
-        <PicturePicker />
+        <PicturePicker
+          picture={props.picture}
+          changePicture={props.changePicture}
+          noPicture={props.noPicture}
+          changeNoPicture={props.changeNoPicture}
+        />
       </div>
       <div className="col-sm-2">
         <BorderPicker selected={props.border} change={props.changeBorder} color={props.color} />
@@ -29,13 +36,17 @@ function Form(props) {
 const putStateToProps = (state) => {
   return {
     border: state.border,
-    color: state.color
+    color: state.color,
+    picture: state.picture,
+    noPicture: state.noPicture
   }
 };
 
 const putActionsToProps = {
   changeBorder,
-  changeColor
+  changeColor,
+  changePicture,
+  changeNoPicture
 };
 
 export default connect(putStateToProps, putActionsToProps)(Form);
