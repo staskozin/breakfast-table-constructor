@@ -40,7 +40,7 @@ export default class Popup extends React.Component {
         <div className={`${style.window} container`}>
           <div className={style.header}>
             <h2 className={formStyle.header}>Выберите рисунок</h2>
-            <button className={style.close} onClick={() => this.props.setIsPopupOpen()}>× Закрыть</button>
+            <button className={style.close} onClick={() => this.props.setIsPopupOpen()}>×</button>
           </div>
           <div className={style.content}>
             {this.renderContent()}
@@ -82,7 +82,7 @@ export default class Popup extends React.Component {
                         this.props.setIsPopupOpen();
                         this.props.changeNoPicture(false);
                       }}
-                      className="img-responsive"
+                      className={`${style.picture} img-responsive`}
                       src={pic.preview_url}
                       alt={pic.name}
                     />

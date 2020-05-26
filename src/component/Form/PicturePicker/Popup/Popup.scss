@@ -1,7 +1,7 @@
 .popup {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
@@ -11,30 +11,51 @@
 
 .window {
   background-color: #fff;
-  margin-top: 1vh;
-  height: 98vh;
+  width: 100%;
+  height: 100vh;
   overflow-y: scroll;
-  padding-right: 17px;
+  // Перезаписываю bootstrap
+  padding: 0 !important;
+  padding-bottom: 45px !important;
 }
 
 .header {
   position: fixed;
   background-color: white;
   z-index: 1;
-  width: 94%;
+  width: inherit;
   height: 67px;
   display: flex;
   justify-content: space-between;
+  padding-left: 15px;
+}
+
+.close {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: none;
+  font-size: 44px;
+  padding-left: 22px;
+  padding-right: 15px;
 }
 
 .content {
   margin-top: 67px;
+  padding: 0 15px;
+}
+
+.picture {
+  cursor: pointer;
+  transition: opacity 0.33s ease-out;
+
+  &:hover {
+    opacity: 0.85;
+    transition: none;
+  }
 }
 
 .caption {
   padding-left: 4px;
-}
-
-.close {
-
 }
