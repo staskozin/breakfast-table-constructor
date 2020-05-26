@@ -27,12 +27,12 @@ module.exports = merge(baseConfig, {
         ]
       },
       {
-        test: /(Select|View)\.(js|jsx)$/,
+        test: /\.(js|jsx|css|s[ac]ss)$/,
         use: {
           loader: 'string-replace-loader',
           options: {
             search: '/_constructor/img/',
-            replace: 'img/',
+            replace: '/img/',
             flags: 'g'
           }
         }

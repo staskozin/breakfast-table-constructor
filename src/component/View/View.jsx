@@ -7,13 +7,19 @@ function View(props) {
   const border = props.border === 1 ? 1 : props.color + '-' + props.border;
   return (
     <div className={style.wrap} >
-      <img className={style.table} src={`/img/tables/${props.color}-${props.border}.jpg`} alt="" />
-      <img
-        className={style.picture}
-        src={!props.noPicture.checked ? props.picture : null}
-        alt=""
-      />
-      <img className={style.border} src={`/img/borders/${border}.png`} alt="" />
+      <img className={style.table} src={`/_constructor/img/tables/${props.color}-${props.border}.jpg`} alt="" />
+      {
+        !props.noPicture.checked ?
+          <>
+            <img
+              className={style.picture}
+              src={props.picture}
+              alt=""
+            />
+            <img className={style.border} src={`/_constructor/img/borders/${border}.png`} alt="" />
+          </>
+          : null
+      }
     </div>
   )
 }
