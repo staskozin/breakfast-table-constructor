@@ -1,0 +1,23 @@
+.label {
+  display: flex;
+  margin-bottom: 13px;
+  font-size: 16px;
+  cursor: pointer;
+
+  input {
+    margin: 0 6px 0 0 !important;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.button {
+  font-size: 16px;
+  color: #fff;
+  padding: 9px 13px 11px;
+  background-color: #f15a29;
+  background: linear-gradient(to bottom, #f15a29, #c33f14);
+  border-color: #c33f14 #c33f14 #ad2e07;
+  border-radius: 6px;
+  border-width: 1px;
+}
