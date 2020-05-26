@@ -80,7 +80,6 @@ export default class Popup extends React.Component {
                       onClick={() => {
                         this.props.changePicture(pic.url);
                         this.props.setIsPopupOpen();
-                        this.props.changeNoPicture(false);
                       }}
                       className={`${style.picture} img-responsive`}
                       src={pic.preview_url}
