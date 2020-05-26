@@ -18,21 +18,19 @@ import './main.scss';
 
 ReactDOM.render(
   <Provider store={store}>
-    <div className="container">
-      <div className="row">
-        <div className="col-sm-12 col-md-6 col-lg-5">
-          <h1>Конструктор столиков</h1>
-        </div>
-        <div className="col-sm-12 col-md-6 col-lg-7">
-          <Info />
-        </div>
+    <div className="row">
+      <div className="col-sm-12 col-md-6 col-lg-5">
+        <h1>Конструктор столиков</h1>
       </div>
-      <div className="row">
-        <div className="col-sm-6">
-          <View />
-        </div>
-        <Form />
+      <div className="col-sm-12 col-md-6 col-lg-7">
+        <Info />
       </div>
+    </div>
+    <div className="row">
+      <div className="col-sm-6">
+        <View />
+      </div>
+      <Form />
     </div>
   </Provider>,
   document.getElementById('app')
