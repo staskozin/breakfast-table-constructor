@@ -13,6 +13,7 @@ function Info(props) {
       <li className={s.info__item}>
         <button
           className={s.button}
+          onClick={() => cart.add(532, props.quantity, convertStateToRequestData(props))}
         >В корзину</button>
       </li>
 
@@ -47,11 +48,28 @@ function formatPrice(price) {
   return res + ' ₽';
 }
 
+function convertStateToRequestData(state) {
+  const { border, color, picture, noPicture } = state;
+  let data = {};
+  data['option[1]'] = border;
+  data['option[2]'] = color;
+  data['option[3][]'] = 9;
+  data['option[4]'] = picture ? picture : '-'
+  data['option[5]'] = '-';
+  if (noPicture.checked)
+  data['option[11][]'] = 25;
+  return data;
+}
+
 const putStateToProps = state => {
   return {
     price: state.price,
     quantity: state.quantity,
-    total: state.total
+    total: state.total,
+    border: state.border,
+    color: state.color,
+    picture: state.picture,
+    noPicture: state.noPicture
   }
 };
 
