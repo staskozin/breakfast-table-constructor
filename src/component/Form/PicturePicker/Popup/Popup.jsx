@@ -59,7 +59,7 @@ export default class Popup extends React.Component {
         </>
       )
     } else if (!this.state.isLoaded || Object.keys(this.state.pictures).length === 0) {
-      return <h2>Загрузка... (лучше какую-нибудь крутилку показать)</h2>
+      return <div className={style.loader}><div></div><div></div><div></div><div></div></div>
     } else {
       return this.renderCategories();
     }
