@@ -20,7 +20,7 @@ export default [
     price: 0
   },
   {
-    value: 15,
+    value: 103,
     name: 'Белый',
     price: 300
   }
