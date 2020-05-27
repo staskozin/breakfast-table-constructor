@@ -1,9 +1,9 @@
 export default {
-  price: 900,
+  price: 1650,
   quantity: 1,
-  total: 900,
-  border: 1,
-  color: 13,
+  total: 1650,
+  border: 2,
+  color: 6,
   picture: null,
   noPicture: {
     checked: true,
