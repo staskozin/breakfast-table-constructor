@@ -51,7 +51,16 @@ module.exports = {
   plugins: [
     new CopyPlugin({
       patterns: [
-        { from: 'static', to: '.' }
+        {
+          from: 'static',
+          to: '.',
+          globOptions: {
+            ignore: [
+              '**/img/constructor.png',
+              '**/index.html'
+            ]
+          }
+        }
       ]
     })
   ]
