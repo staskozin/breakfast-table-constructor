@@ -4,7 +4,7 @@
 [Посмотреть на сайте](https://stolpodnos.ru/constructor)
 
 Встраивается в OpenCart.\
-Написан на React + Redux. Сборка через Webpack.
+Написан на React + Redux. Сборка через Webpack. Стили на SASS.
 
 ![Конструктор столиков](./static/img/constructor.png)
 
